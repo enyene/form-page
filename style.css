@@ -132,6 +132,7 @@ button:active {
   font-weight: 600;
 }
 
+
 @media (min-width: 768px) {
   body {
     background: url("bg.png") no-repeat center;
@@ -160,4 +161,52 @@ button:active {
   .form_content {
     width: 70%;
   }
+  input:required:invalid {
+    outline: none;
+    border: none;
+    border: 1px solid hsl(0, 100%, 74%);
+    background-image: url(icon-error.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-origin: content-box;
+    content:attr(data-error);
+  }
+  input:invalid+span {
+    display: inline;
+    color: hsl(0, 100%, 74%);
+    float: right;
+    font-size: 14px;
+  }
+  input:invalid {
+    outline: none;
+    border: none;
+    border: 1px solid hsl(154, 59% 31%);
+  }
+  .form_control[data-error]:after{
+    content:attr(data-error);
+    color: hsl(0, 100%, 74%);
+    margin: 0px 0px 0px 300px;
+    font-size: 10px;
+    display: block;
+    
+  }
+  
+  .form_control[data-error]:after{
+  content:attr(data-error);
+  color: hsl(0, 100%, 74%);
+  margin: 0px 0px 0px 300px;
+  font-size: 10px;
+  display: block;
+  
+  }
+  
+  .form_control[data-error] {
+  border-color: hsl(0, 80%, 75%) ;
+  color: hsl(0, 100%, 74%);
+  background: #FFFAFA;
+  content:attr(data-error);
+  }
+  
 }
+
+  

@@ -28,22 +28,17 @@
 
         <div class="form_container">
           <form id="form">
-            <label for="firstname" class="form_control">
-              <input
-                type="text"
-                placeholder="First Name"
-                id="firstname"
-                required
-              />
+            <label for="firstname" class="form_control" data-error="First Name cannot be empty">
+              <input type="text"placeholder="First Name"id="firstname"required data-error="First Name cannot be empty"/>
             </label>
-            <label for="lastname" class="form_control">
-              <input type="text" placeholder="Last Name" id="lastname" />
+            <label for="lastname" class="form_control" data-error="Last Name cannot be empty">
+              <input type="text" placeholder="Last Name" id="lastname"  required/>
             </label>
-            <label for="email" class="form_control">
-              <input type="email" placeholder="Email Address" id="email" />
+            <label for="email" class="form_control" data-error="Looks like this is not an email">
+              <input type="email" placeholder="Email Address" id="email" required/>
             </label>
-            <label for="password" class="form_control">
-              <input type="password" placeholder="Password" id="password" />
+            <label for="password" class="form_control" data-error="Password cannot be empty">
+              <input type="password" placeholder="Password" id="password" required/>
             </label>
             <button>Claim your free trial</button>
           </form>
